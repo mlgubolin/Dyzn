@@ -8,6 +8,5 @@ defmodule DyznMusic.Repo.Migrations.CreateMusics do
 
       timestamps()
     end
-
   end
 end

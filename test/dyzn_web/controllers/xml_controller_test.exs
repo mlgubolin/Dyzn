@@ -75,6 +75,7 @@ defmodule DyznMusicWeb.XmlControllerTest do
     test "deletes chosen xml", %{conn: conn, xml: xml} do
       conn = delete(conn, Routes.xml_path(conn, :delete, xml))
       assert redirected_to(conn) == Routes.xml_path(conn, :index)
+
       assert_error_sent 404, fn ->
         get(conn, Routes.xml_path(conn, :show, xml))
       end
