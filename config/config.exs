@@ -7,15 +7,15 @@
 # General application configuration
 use Mix.Config
 
-config :dyzn,
-  ecto_repos: [Dyzn.Repo]
+config :dyznmusic,
+  ecto_repos: [DyznMusic.Repo]
 
 # Configures the endpoint
-config :dyzn, DyznWeb.Endpoint,
+config :dyznmusic, DyznMusicWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "jzvEwRB9xFuxGFQAKGkME5S0WaeEVopzIlFdTf7ACz8BFS6bsOQ+AJFS7C9Ej9dg",
-  render_errors: [view: DyznWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Dyzn.PubSub,
+  render_errors: [view: DyznMusicWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: DyznMusic.PubSub,
   live_view: [signing_salt: "YPpJ3lGO"]
 
 # Configures Elixir's Logger

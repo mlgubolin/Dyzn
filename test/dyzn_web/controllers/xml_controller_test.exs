@@ -1,7 +1,7 @@
-defmodule DyznWeb.XmlControllerTest do
-  use DyznWeb.ConnCase
+defmodule DyznMusicWeb.XmlControllerTest do
+  use DyznMusicWeb.ConnCase
 
-  alias Dyzn.XML
+  alias DyznMusic.XML
 
   @create_attrs %{}
   @update_attrs %{}

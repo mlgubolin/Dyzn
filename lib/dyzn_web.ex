@@ -1,12 +1,12 @@
-defmodule DyznWeb do
+defmodule DyznMusicWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use DyznWeb, :controller
-      use DyznWeb, :view
+      use DyznMusicWeb, :controller
+      use DyznMusicWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule DyznWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: DyznWeb
+      use Phoenix.Controller, namespace: DyznMusicWeb
 
       import Plug.Conn
-      import DyznWeb.Gettext
-      alias DyznWeb.Router.Helpers, as: Routes
+      import DyznMusicWeb.Gettext
+      alias DyznMusicWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/dyzn_web/templates",
-        namespace: DyznWeb
+        root: "lib/dyznmusic_web/templates",
+        namespace: DyznMusicWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -54,7 +54,7 @@ defmodule DyznWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import DyznWeb.Gettext
+      import DyznMusicWeb.Gettext
     end
   end
 
@@ -66,9 +66,9 @@ defmodule DyznWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import DyznWeb.ErrorHelpers
-      import DyznWeb.Gettext
-      alias DyznWeb.Router.Helpers, as: Routes
+      import DyznMusicWeb.ErrorHelpers
+      import DyznMusicWeb.Gettext
+      alias DyznMusicWeb.Router.Helpers, as: Routes
     end
   end
 

@@ -1,3 +1,3 @@
-defmodule DyznWeb.PageViewTest do
-  use DyznWeb.ConnCase, async: true
+defmodule DyznMusicWeb.PageViewTest do
+  use DyznMusicWeb.ConnCase, async: true
 end

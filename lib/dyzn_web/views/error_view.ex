@@ -1,5 +1,5 @@
-defmodule DyznWeb.ErrorView do
-  use DyznWeb, :view
+defmodule DyznMusicWeb.ErrorView do
+  use DyznMusicWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

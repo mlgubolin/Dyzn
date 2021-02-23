@@ -1,4 +1,4 @@
-defmodule DyznWeb.ErrorHelpers do
+defmodule DyznMusicWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -39,9 +39,9 @@ defmodule DyznWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(DyznWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(DyznMusicWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(DyznWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(DyznMusicWeb.Gettext, "errors", msg, opts)
     end
   end
 end

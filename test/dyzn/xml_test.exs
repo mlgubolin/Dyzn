@@ -1,10 +1,10 @@
-defmodule Dyzn.XMLTest do
-  use Dyzn.DataCase
+defmodule DyznMusic.XMLTest do
+  use DyznMusic.DataCase
 
-  alias Dyzn.XML
+  alias DyznMusic.XML
 
   describe "xmls" do
-    alias Dyzn.XML.Xml
+    alias DyznMusic.XML.Xml
 
     @valid_attrs %{}
     @update_attrs %{}

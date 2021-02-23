@@ -1,3 +1,3 @@
-defmodule DyznWeb.LayoutView do
-  use DyznWeb, :view
+defmodule DyznMusicWeb.LayoutView do
+  use DyznMusicWeb, :view
 end

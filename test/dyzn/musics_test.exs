@@ -1,10 +1,10 @@
-defmodule Dyzn.MusicsTest do
-  use Dyzn.DataCase
+defmodule DyznMusic.MusicsTest do
+  use DyznMusic.DataCase
 
-  alias Dyzn.Musics
+  alias DyznMusic.Musics
 
   describe "musics" do
-    alias Dyzn.Musics.Music
+    alias DyznMusic.Musics.Music
 
     @valid_attrs %{path: "some path", type: "some type"}
     @update_attrs %{path: "some updated path", type: "some updated type"}

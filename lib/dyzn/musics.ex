@@ -1,12 +1,12 @@
-defmodule Dyzn.Musics do
+defmodule DyznMusic.Musics do
   @moduledoc """
   The Musics context.
   """
 
   import Ecto.Query, warn: false
-  alias Dyzn.Repo
+  alias DyznMusic.Repo
 
-  alias Dyzn.Musics.Music
+  alias DyznMusic.Musics.Music
 
   @doc """
   Returns the list of musics.

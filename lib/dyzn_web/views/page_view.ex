@@ -1,5 +1,5 @@
-defmodule DyznWeb.PageView do
-  use DyznWeb, :view
+defmodule DyznMusicWeb.PageView do
+  use DyznMusicWeb, :view
 
   def render("index.html",params) do
     params.xml

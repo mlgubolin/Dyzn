@@ -1,5 +1,5 @@
-defmodule DyznWeb.Router do
-  use DyznWeb, :router
+defmodule DyznMusicWeb.Router do
+  use DyznMusicWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,14 +13,14 @@ defmodule DyznWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/rest", DyznWeb do
+  scope "/rest", DyznMusicWeb do
     pipe_through :browser
 
     get "/", PageController, :ping
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", DyznWeb do
+  # scope "/api", DyznMusicWeb do
   #   pipe_through :api
   # end
 
@@ -36,7 +36,7 @@ defmodule DyznWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: DyznWeb.Telemetry
+      live_dashboard "/dashboard", metrics: DyznMusicWeb.Telemetry
     end
   end
 end

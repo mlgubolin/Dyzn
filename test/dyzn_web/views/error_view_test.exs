@@ -1,14 +1,14 @@
-defmodule DyznWeb.ErrorViewTest do
-  use DyznWeb.ConnCase, async: true
+defmodule DyznMusicWeb.ErrorViewTest do
+  use DyznMusicWeb.ConnCase, async: true
 
   # Bring render/3 and render_to_string/3 for testing custom views
   import Phoenix.View
 
   test "renders 404.html" do
-    assert render_to_string(DyznWeb.ErrorView, "404.html", []) == "Not Found"
+    assert render_to_string(DyznMusicWeb.ErrorView, "404.html", []) == "Not Found"
   end
 
   test "renders 500.html" do
-    assert render_to_string(DyznWeb.ErrorView, "500.html", []) == "Internal Server Error"
+    assert render_to_string(DyznMusicWeb.ErrorView, "500.html", []) == "Internal Server Error"
   end
 end

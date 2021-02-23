@@ -1,5 +1,5 @@
-defmodule DyznWeb.PageControllerTest do
-  use DyznWeb.ConnCase
+defmodule DyznMusicWeb.PageControllerTest do
+  use DyznMusicWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

@@ -1,4 +1,4 @@
-defmodule DyznWeb.Telemetry do
+defmodule DyznMusicWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -31,11 +31,11 @@ defmodule DyznWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("dyzn.repo.query.total_time", unit: {:native, :millisecond}),
-      summary("dyzn.repo.query.decode_time", unit: {:native, :millisecond}),
-      summary("dyzn.repo.query.query_time", unit: {:native, :millisecond}),
-      summary("dyzn.repo.query.queue_time", unit: {:native, :millisecond}),
-      summary("dyzn.repo.query.idle_time", unit: {:native, :millisecond}),
+      summary("dyznmusic.repo.query.total_time", unit: {:native, :millisecond}),
+      summary("dyznmusic.repo.query.decode_time", unit: {:native, :millisecond}),
+      summary("dyznmusic.repo.query.query_time", unit: {:native, :millisecond}),
+      summary("dyznmusic.repo.query.queue_time", unit: {:native, :millisecond}),
+      summary("dyznmusic.repo.query.idle_time", unit: {:native, :millisecond}),
 
       # VM Metrics
       summary("vm.memory.total", unit: {:byte, :kilobyte}),
@@ -49,7 +49,7 @@ defmodule DyznWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {DyznWeb, :count_users, []}
+      # {DyznMusicWeb, :count_users, []}
     ]
   end
 end

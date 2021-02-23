@@ -1,4 +1,4 @@
-defmodule Dyzn.Musics.Music do
+defmodule DyznMusic.Musics.Music do
   use Ecto.Schema
   import Ecto.Changeset
 

@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(Dyzn.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(DyznMusic.Repo, :manual)

@@ -1,4 +1,4 @@
-defmodule Dyzn.XML do
+defmodule DyznMusic.XML do
   @moduledoc """
   The XML context.
   """

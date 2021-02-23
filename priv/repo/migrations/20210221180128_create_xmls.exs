@@ -1,4 +1,4 @@
-defmodule Dyzn.Repo.Migrations.CreateXmls do
+defmodule DyznMusic.Repo.Migrations.CreateXmls do
   use Ecto.Migration
 
   def change do

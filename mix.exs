@@ -1,9 +1,9 @@
-defmodule Dyzn.MixProject do
+defmodule DyznMusic.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :dyzn,
+      app: :dyznmusic,
       version: "0.1.0",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -20,7 +20,7 @@ defmodule Dyzn.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Dyzn.Application, []},
+      mod: {DyznMusic.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
