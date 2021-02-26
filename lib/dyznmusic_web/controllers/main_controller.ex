@@ -1,4 +1,4 @@
-defmodule DyznMusicWeb.PageController do
+defmodule DyznMusicWeb.MainController do
   use DyznMusicWeb, :controller
   alias DyznMusic.XML
 
@@ -14,7 +14,7 @@ defmodule DyznMusicWeb.PageController do
 
   def getLicense(conn, _params) do
     xml = XML.return_header(current_url(conn), "ok", "0.0.1")
-    xml = xml <> "<license valid=\"true\" licenseExpires=\"never, dyznmusic is free :)\""
+    xml = xml <> "<license valid=\"true\" licenseExpires=\"never, Dyzn Music is free :)\""
 
     conn
     |> Plug.Conn.put_resp_content_type("application/xml")
