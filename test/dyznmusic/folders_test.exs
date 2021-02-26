@@ -14,7 +14,7 @@ defmodule DyznMusic.FoldersTest do
       {:ok, folder} =
         attrs
         |> Enum.into(@valid_attrs)
-        |> Folders.create_folder()
+        |> Folders.add_folder()
 
       folder
     end
@@ -29,13 +29,13 @@ defmodule DyznMusic.FoldersTest do
       assert Folders.get_folder!(folder.id) == folder
     end
 
-    test "create_folder/1 with valid data creates a folder" do
-      assert {:ok, %Folder{} = folder} = Folders.create_folder(@valid_attrs)
+    test "add_folder/1 with valid data creates a folder" do
+      assert {:ok, %Folder{} = folder} = Folders.add_folder(@valid_attrs)
       assert folder.folders == "some folders"
     end
 
-    test "create_folder/1 with invalid data returns error changeset" do
-      assert {:error, %Ecto.Changeset{}} = Folders.create_folder(@invalid_attrs)
+    test "add_folder/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Folders.add_folder(@invalid_attrs)
     end
 
     test "update_folder/2 with valid data updates the folder" do

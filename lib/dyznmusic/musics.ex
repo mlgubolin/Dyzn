@@ -49,12 +49,10 @@ defmodule DyznMusic.Musics do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_music(path, music_extentions) do
-    for type <- music_extentions, String.contains?(path, "." <> type) do
-      %Music{path: path, type: type}
-      |> Music.changeset()
-      |> Repo.insert()
-    end
+  def create_music(attrs) do
+    %Music{}
+    |> Music.changeset(attrs)
+    |> Repo.insert()
   end
 
   @doc """
@@ -102,5 +100,11 @@ defmodule DyznMusic.Musics do
   """
   def change_music(%Music{} = music, attrs \\ %{}) do
     Music.changeset(music, attrs)
+  end
+
+  def add_music(path,music_extentions) do
+    for type <- music_extentions, String.contains?(path, "." <> type) do
+      create_music(%Music{path: path, type: type})
+    end
   end
 end
