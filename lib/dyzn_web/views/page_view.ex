@@ -2,8 +2,7 @@ defmodule DyznWeb.PageView do
   use DyznWeb, :view
 
   def render("index.html",params) do
-    params.xml
+    params.xml_header <> params.xml <> params.xml_footer
     |> Phoenix.HTML.raw()
-    # |> Phoenix.HTML.safe_to_string()
   end
 end
