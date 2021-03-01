@@ -11,7 +11,6 @@ defmodule Dyzn.MixProject do
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
-      dir: "/Users/mlgubolin/Music"
     ]
   end
 
