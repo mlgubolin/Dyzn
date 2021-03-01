@@ -13,10 +13,10 @@ defmodule DyznWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", DyznWeb do
+  scope "/rest", DyznWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/ping", PageController, :ping
   end
 
   # Other scopes may use custom stacks.
