@@ -1,10 +1,10 @@
 use Mix.Config
 
 # Configure your database
-config :dyzn, Dyzn.Repo,
+config :dyznmusic, DyznMusic.Repo,
   username: "postgres",
   password: "postgres",
-  database: "dyzn_dev",
+  database: "dyznmusic_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -15,7 +15,7 @@ config :dyzn, Dyzn.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :dyzn, DyznWeb.Endpoint,
+config :dyznmusic, DyznMusicWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -55,13 +55,13 @@ config :dyzn, DyznWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :dyzn, DyznWeb.Endpoint,
+config :dyznmusic, DyznMusicWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/dyzn_web/(live|views)/.*(ex)$",
-      ~r"lib/dyzn_web/templates/.*(eex)$"
+      ~r"lib/dyznmusic_web/(live|views)/.*(ex)$",
+      ~r"lib/dyznmusic_web/templates/.*(eex)$"
     ]
   ]
 

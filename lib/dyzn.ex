@@ -1,6 +1,6 @@
-defmodule Dyzn do
+defmodule DyznMusic do
   @moduledoc """
-  Dyzn keeps the contexts that define your domain
+  DyznMusic keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

@@ -1,4 +1,4 @@
-defmodule DyznWeb.ConnCase do
+defmodule DyznMusicWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule DyznWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use DyznWeb.ConnCase, async: true`, although
+  by setting `use DyznMusicWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -22,20 +22,20 @@ defmodule DyznWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import DyznWeb.ConnCase
+      import DyznMusicWeb.ConnCase
 
-      alias DyznWeb.Router.Helpers, as: Routes
+      alias DyznMusicWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint DyznWeb.Endpoint
+      @endpoint DyznMusicWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Dyzn.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(DyznMusic.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Dyzn.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(DyznMusic.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

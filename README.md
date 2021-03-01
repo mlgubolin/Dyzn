@@ -1,4 +1,4 @@
-# Dyzn
+# DyznMusic
 
 To start your Phoenix server:
 
