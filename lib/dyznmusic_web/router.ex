@@ -16,7 +16,7 @@ defmodule DyznMusicWeb.Router do
   scope "/rest", DyznMusicWeb do
     pipe_through :browser
 
-    get "/", MainController, :ping
+    get "/ping", PageController, :ping
   end
 
   # Other scopes may use custom stacks.
